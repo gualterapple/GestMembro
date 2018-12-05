@@ -1455,11 +1455,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mac/Projects/GestMembrosSUD/GestMembrosSUD.Android/GestMembrosSUD.Android.csproj",
+      "projectUniqueName": "/Users/mac/Projects/GestMembro/GestMembrosSUD.Android/GestMembrosSUD.Android.csproj",
       "projectName": "GestMembrosSUD.Android",
-      "projectPath": "/Users/mac/Projects/GestMembrosSUD/GestMembrosSUD.Android/GestMembrosSUD.Android.csproj",
+      "projectPath": "/Users/mac/Projects/GestMembro/GestMembrosSUD.Android/GestMembrosSUD.Android.csproj",
       "packagesPath": "/Users/mac/.nuget/packages/",
-      "outputPath": "/Users/mac/Projects/GestMembrosSUD/GestMembrosSUD.Android/obj",
+      "outputPath": "/Users/mac/Projects/GestMembro/GestMembrosSUD.Android/obj",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mac/.config/NuGet/NuGet.Config"
@@ -1475,8 +1475,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "/Users/mac/Projects/GestMembrosSUD/GestMembrosSUD/GestMembrosSUD.csproj": {
-              "projectPath": "/Users/mac/Projects/GestMembrosSUD/GestMembrosSUD/GestMembrosSUD.csproj"
+            "/Users/mac/Projects/GestMembro/GestMembrosSUD/GestMembrosSUD.csproj": {
+              "projectPath": "/Users/mac/Projects/GestMembro/GestMembrosSUD/GestMembrosSUD.csproj"
             }
           }
         }

@@ -917,11 +917,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mac/Projects/GestMembrosSUD/GestMembrosSUD/GestMembrosSUD.csproj",
+      "projectUniqueName": "/Users/mac/Projects/GestMembro/GestMembrosSUD/GestMembrosSUD.csproj",
       "projectName": "GestMembrosSUD",
-      "projectPath": "/Users/mac/Projects/GestMembrosSUD/GestMembrosSUD/GestMembrosSUD.csproj",
+      "projectPath": "/Users/mac/Projects/GestMembro/GestMembrosSUD/GestMembrosSUD.csproj",
       "packagesPath": "/Users/mac/.nuget/packages/",
-      "outputPath": "/Users/mac/Projects/GestMembrosSUD/GestMembrosSUD/obj",
+      "outputPath": "/Users/mac/Projects/GestMembro/GestMembrosSUD/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

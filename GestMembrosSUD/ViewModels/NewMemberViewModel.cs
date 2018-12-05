@@ -33,6 +33,11 @@ namespace GestMembrosSUD.ViewModels
         #endregion
 
         #region Properties
+        public bool IsRunning
+        {
+            get { return this.isRunning; }
+            set { SetValue(ref this.isRunning, value); }
+        }
         public ImageSource Photo
         {
             get { return this.photo; }
@@ -95,6 +100,7 @@ namespace GestMembrosSUD.ViewModels
         #region Methods
         private async void ChangeImage()
         {
+
             await CrossMedia.Current.Initialize();
 
             if (CrossMedia.Current.IsCameraAvailable &&
@@ -115,6 +121,8 @@ namespace GestMembrosSUD.ViewModels
 
                 if (source == "camera")
                 {
+                    this.isRunning = true;
+
                     this.file = await CrossMedia.Current.TakePhotoAsync(
                         new StoreCameraMediaOptions
                         {
@@ -126,6 +134,7 @@ namespace GestMembrosSUD.ViewModels
                 }
                 else
                 {
+                    this.isRunning = true;
                     this.file = await CrossMedia.Current.PickPhotoAsync();
                 }
             }
@@ -145,10 +154,13 @@ namespace GestMembrosSUD.ViewModels
             Console.WriteLine("Caminho da foto: " + file.Path);
             Console.WriteLine("ImageSource.FromStream da foto: " + this.Photo);
             Console.WriteLine("file.GetStream() da foto: " + file.GetStream());
+            this.isRunning = false;
         }
 
         public async void Save()
         {
+            this.isRunning = true;
+
             byte[] imageArray = null;
             if (this.file != null)
             {
@@ -175,6 +187,8 @@ namespace GestMembrosSUD.ViewModels
                     "Done",
                     "Member "+ Name + " inserted!",
                     "Accept");
+
+            this.isRunning = false;
 
             MainViewModel.GetInstance().Members = new MembersViewModel();
             await Application.Current.MainPage.Navigation.PushAsync(new MembersPage());

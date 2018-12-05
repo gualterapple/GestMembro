@@ -1784,11 +1784,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mac/Projects/GestMembrosSUD/GestMembrosSUD.iOS/GestMembrosSUD.iOS.csproj",
+      "projectUniqueName": "/Users/mac/Projects/GestMembro/GestMembrosSUD.iOS/GestMembrosSUD.iOS.csproj",
       "projectName": "GestMembrosSUD.iOS",
-      "projectPath": "/Users/mac/Projects/GestMembrosSUD/GestMembrosSUD.iOS/GestMembrosSUD.iOS.csproj",
+      "projectPath": "/Users/mac/Projects/GestMembro/GestMembrosSUD.iOS/GestMembrosSUD.iOS.csproj",
       "packagesPath": "/Users/mac/.nuget/packages/",
-      "outputPath": "/Users/mac/Projects/GestMembrosSUD/GestMembrosSUD.iOS/obj",
+      "outputPath": "/Users/mac/Projects/GestMembro/GestMembrosSUD.iOS/obj",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mac/.config/NuGet/NuGet.Config"
@@ -1804,8 +1804,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/mac/Projects/GestMembrosSUD/GestMembrosSUD/GestMembrosSUD.csproj": {
-              "projectPath": "/Users/mac/Projects/GestMembrosSUD/GestMembrosSUD/GestMembrosSUD.csproj"
+            "/Users/mac/Projects/GestMembro/GestMembrosSUD/GestMembrosSUD.csproj": {
+              "projectPath": "/Users/mac/Projects/GestMembro/GestMembrosSUD/GestMembrosSUD.csproj"
             }
           }
         }

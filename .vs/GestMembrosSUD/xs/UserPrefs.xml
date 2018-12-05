@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{CDB24296-3C79-4F45-99D0-393CEC6CBB09}|Default">
+  <MonoDevelop.Ide.ItemProperties.GestMembrosSUD.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.DD0C7BF7-208A-46DB-82DD-A84C248DDD71" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Origem Não Disponível">
+    <Files>
+      <File FileName="GestMembrosSUD/Views/UpdateMemberPage.xaml" Line="5" Column="107" />
+      <File FileName="GestMembrosSUD/Views/NewMemberPage.xaml" Line="5" Column="107" />
+      <File FileName="GestMembrosSUD/ViewModels/NewMemberViewModel.cs" Line="192" Column="13" />
+      <File FileName="GestMembrosSUD/ViewModels/UpdateMemberViewModel.cs" Line="166" Column="10" />
+      <File FileName="GestMembrosSUD.Android/MainActivity.cs" Line="30" Column="23" />
+      <File FileName="GestMembrosSUD.Android/Resources/xml/file_paths.xml" Line="6" Column="9" />
+      <File FileName="Origem Não Disponível" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.GestMembrosSUD.Android PreferredExecutionTarget="Android.TG038186" AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" />
+</Properties>

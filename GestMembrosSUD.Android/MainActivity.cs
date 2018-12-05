@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Plugin.Permissions;
 
 namespace GestMembrosSUD.Droid
 {
@@ -20,6 +21,16 @@ namespace GestMembrosSUD.Droid
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+        }
+        public override void OnRequestPermissionsResult(
+            int requestCode,
+            string[] permissions,
+            [GeneratedEnum] Permission[] grantResults)
+        {
+            PermissionsImplementation.Current.OnRequestPermissionsResult(
+                requestCode,
+               permissions,
+               grantResults);
         }
     }
 }

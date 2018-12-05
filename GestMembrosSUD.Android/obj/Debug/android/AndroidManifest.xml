@@ -10,6 +10,9 @@
   <uses-feature android:name="android.hardware.camera" android:required="false" />
   <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
   <application android:label="GestMembrosSUD.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true">
+    <provider android:name="android.support.v4.content.FileProvider" android:authorities="com.gstecnologias.GestMembrosSUD.fileprovider" android:exported="false" android:grantUriPermissions="true">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"></meta-data>
+    </provider>
     <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="GestMembrosSUD" android:theme="@style/MainTheme" android:name="md5299e4531eec529451de4ced7de8f5621.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
