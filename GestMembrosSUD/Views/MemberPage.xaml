@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    x:Class="GestMembrosSUD.Views.MemberPage"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    Title="Member">
+    <ContentPage.Content>
+        <ScrollView
+        BindingContext="{Binding Member}">
+            <StackLayout
+                Padding="5">
+                <controls:CircleImage 
+                  Aspect = "AspectFill"
+                  BorderColor = "#2daae1"
+                  BorderThickness = "1"
+                  Grid.Column="0"
+                  HeightRequest = "130"
+                  HorizontalOptions="Center"
+                  WidthRequest = "130"
+                  Source="{Binding Member.Photo}">
+                <!--<controls:CircleImage.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ChangeImageCommand}" />
+                    </controls:CircleImage.GestureRecognizers>-->
+                </controls:CircleImage>
+                <!--<Image
+                    Source="{Binding Member.Photo}"
+                    WidthRequest="200">             
+                </Image>-->
+                <Label
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="{Binding Member.Name}"
+                    TextColor="Black">
+                </Label>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text="Capela"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        FontAttributes="Bold"
+                        Text="{Binding Member.Capela}"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Text="Address"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        FontAttributes="Bold"
+                        Text="{Binding Member.Address}"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Text="Age"
+                        TextColor="Black">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        FontAttributes="Bold"
+                        Text="{Binding Member.Age}"
+                        TextColor="Black">
+                    </Label>
+                    <Button
+                       BackgroundColor="#2daae1"
+                       BorderRadius="10"
+                       Command="{Binding EditMemberCommand}"
+                       Grid.Column="0"
+                       Grid.Row="3"
+                       HeightRequest="40"
+                       HorizontalOptions="FillAndExpand"
+                       IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
+                       Text="Edit"
+                       TextColor="White">
+                    </Button>
+                    <Button
+                       BackgroundColor="red"
+                       BorderRadius="10"
+                       Command="{Binding DeleteUserCommand}"
+                       Grid.Column="1"
+                       Grid.Row="3"
+                       HeightRequest="40"
+                       HorizontalOptions="FillAndExpand"
+                       IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
+                       Text="Delete"
+                       TextColor="White">
+                </Button>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

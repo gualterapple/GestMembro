@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    x:Class="GestMembrosSUD.Views.MembersPage"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    Title="Members">
+    <ContentPage.Content>
+
+        <StackLayout
+            BindingContext="{Binding Members}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>                  
+                </Grid.ColumnDefinitions>
+                <SearchBar
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HeightRequest="46"
+                    HorizontalOptions="StartAndExpand"
+                    Margin="2"
+                    Text="{Binding Filter, Mode=TwoWay}"
+                    Placeholder="Procurar..."
+                    SearchCommand="{Binding SearchCommand}">
+                </SearchBar>
+                <Button
+                   BackgroundColor="#2daae1"
+                   BorderRadius="5"
+                   Grid.Column="1"
+                   Grid.Row="0"
+                   HeightRequest="46"
+                   Margin="2"
+                   Command="{Binding NewUserCommand}"
+                   HorizontalOptions="FillAndExpand"
+                   IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
+                   Text="New"
+                   TextColor="White"
+                    WidthRequest="60">
+                </Button>
+            </Grid>
+
+            <ListView 
+                HasUnevenRows="true" 
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
+                ItemsSource="{Binding Members}"
+                SeparatorVisibility="None"
+                RefreshCommand="{Binding RefreshCommand}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame
+                                CornerRadius="20"
+                                HasShadow="true"
+                                HeightRequest="60"
+                                Margin="5">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SelectMemberCommand}"/>
+                                </Frame.GestureRecognizers>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <controls:CircleImage 
+                                      Aspect = "AspectFill"
+                                      BorderColor = "#2daae1"
+                                      BorderThickness = "1"
+                                      Grid.Column="0"
+                                      WidthRequest="60"
+                                      HeightRequest="60"
+                                      HorizontalOptions="Start"
+                                      Source="{Binding Photo}">
+                                    <!--<controls:CircleImage.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding ChangeImageCommand}" />
+                                        </controls:CircleImage.GestureRecognizers>-->
+                                    </controls:CircleImage>
+                                    <!--<Image 
+                                        Grid.Column="1"
+                                        HeightRequest="50"
+                                        HorizontalOptions="Start" 
+                                        Source="{Binding Photo}">
+                                    </Image>-->
+                                    <StackLayout 
+                                        Grid.Column="1"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="StartAndExpand">
+                                        <Label 
+                                            FontAttributes="Bold"
+                                            FontSize="Medium" 
+                                            Text="{Binding Name}"
+                                            TextColor="#2daae1">
+                                        </Label>
+                                        <Label 
+                                            FontSize="Small" 
+                                            Text="{Binding Capela}"
+                                            TextColor="#aeadad">
+                                        </Label>  
+                                    </StackLayout>
+                                    <Image 
+                                        Grid.Column="2"
+                                        HorizontalOptions="End" 
+                                        Source="ic_launcher_right">
+                                    </Image>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView> 
+        </StackLayout>        
+    </ContentPage.Content>
+</ContentPage>
